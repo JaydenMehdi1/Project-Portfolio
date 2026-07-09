@@ -16,3 +16,6 @@ Created an Android Application to track and predict wages for the month. With fe
 ![UI Screenshot](../../assets/WageTracker1.jpeg)
 ![UI Screenshot](../../assets/WageTracker2.jpeg)
 ![UI Screenshot](../../assets/WageTracker3.jpeg)
+
+## Link to Repository
+https://github.com/JaydenMehdi1/WageTracker
