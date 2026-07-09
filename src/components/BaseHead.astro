@@ -50,3 +50,31 @@ const { title, description, image = FallbackImage } = Astro.props;
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
+
+<script is:inline>
+	// 1. Core function to safely apply the current correct theme state
+	function applyTheme() {
+		const theme = (() => {
+			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+				return localStorage.getItem('theme');
+			}
+			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				return 'dark';
+			}
+			return 'light';
+		})();
+
+		if (theme === 'dark') {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+		window.localStorage.setItem('theme', theme);
+	}
+
+	// 2. Run immediately on initial website load to avoid a white flash
+	applyTheme();
+
+	// 3. Listen for Astro's page transition swap event and re-apply the active state
+	document.addEventListener('astro:after-swap', applyTheme);
+</script>

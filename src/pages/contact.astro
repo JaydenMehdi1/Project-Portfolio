@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import AboutHeroImage from "../assets/Grad.jpeg"; // Adjust path if your layout folder is structured differently
+const pageTitle = "Contact Me";
+const emailAddress = "jaydenmehdi26@gmail.com"; // Replace with your professional email
+const linkedinUrl = "www.linkedin.com/in/jayden-mehdi-50352322b"; // Replace with your LinkedIn profile
+const githubUrl = "https://github.com/JaydenMehdi1"; // Replace with your GitHub profile
+---
+
+<Layout
+        title="Contact Me"
+        description="Lorem ipsum dolor sit amet"
+        pubDate={new Date('July 09 2026')}
+>
+    <div class="contact-container">
+        <p><center>Feel free to reach out if you're looking for a developer, have questions about my projects, or just want to connect!</center></p>
+
+        <hr />
+
+        <div class="contact-methods">
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p><a href={`mailto:${emailAddress}`}>{emailAddress}</a></p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Professional Networks</h3>
+                <ul>
+                    <li>
+                        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                            LinkedIn Profile →
+                        </a>
+                    </li>
+                    <li>
+                        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                            GitHub Profile →
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    /* Quick styling to make it look clean out of the box */
+    .contact-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    .contact-methods {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .contact-card {
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        margin: 0.5rem 0;
+    }
+    a {
+        color: #a855f7; /* Standard interactive purple tint, customize to fit your theme */
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>

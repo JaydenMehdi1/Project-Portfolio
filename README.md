@@ -1,7 +1,7 @@
 # Astro Starter Kit: Blog
 
 ```sh
-npm create astro@latest -- --template blog
+npm create astro@latest -- --template projects
 ```
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
