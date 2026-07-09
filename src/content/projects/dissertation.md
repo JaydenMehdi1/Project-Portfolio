@@ -12,3 +12,8 @@ I created an Android Application to provide accurate, and precise weather foreca
 ![UI Screenshots](../../assets/SkyCastMain.jpg)
 ![UI Screenshots](../../assets/SkyCast2.jpg)
 ![UI Screenshots](../../assets/SkyCast3.jpg)
+
+## Link To Repository
+https://github.com/JaydenMehdi1/Dissertation-SkyCast
+
+Dissertation Report can also be found in the above repo
